@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/d4ec29d825.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="full-landing-image">
+		<div class="taskbar">
+		<ul class="taskbar-list">
+			<li class="taskbar-item">Giới thiệu</li>
+			<li class="taskbar-item">Liên hệ</li>
+			<li class="taskbar-item">Tải ứng dụng</li>
+		</ul>
+		<ul class="taskbar-list">
+			<li class="taskbar-item"><a href="./index2.html">Đăng nhập</a></li>
+			<li class="taskbar-item"><a href="./index1.html">Đăng ký</a></li>
+		</ul>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		$(".full-landing-image").ripples({
+			resolution: 200,
+			dropRadius: 20,
+			perturbance: 0.02,
+		});
+	</script>
+	<div class="search-box">
+		<input type="text" name="" class="searchtxt" value="" placeholder="Nhập tên phim Anime">
+		<a class="searchbtn" href="#">
+			<i class="fa-solid fa-magnifying-glass"></i>
+		</a>
+	</div>
+	<script type="text/javascript">
+		let searchtxt = document.querySelector('.searchtxt');
+		let searchbtn = document.querySelector('.searchbtn');
+
+		searchbtn.onclick = function(){
+			let url ='https://anivsub.org/search/'+searchtxt.value;
+			window.open(url);
+		}
+	</script>
+</body>
+</html>
